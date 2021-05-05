@@ -26,9 +26,9 @@ int main() {
 	 * to allow it to return back to the program.  Small functions like this with no loops are great
 	 * candidates for this sort of design because it saves the processor wait time.
 	 *
-	 * Note: Loops and loop derivatives do not work in these kinds of functions, and the compiler may
-	 * not tell you that they won't work.  Inline functions are always requests, not commands, so the
-	 * compiler may ignore them.
+	 * Note: While loops and derivatives may work in an inline function, it may cause overhead
+	 * within an inline function, which defeats the purpose of an inline function.  Therefore,
+	 * it is ill advised to use loops within an inline function.
 	 */
 
 	return 0;
